@@ -25,7 +25,7 @@ app.set("views", "E:/AN folder/Node JS folder/Password BE");
 
 app.use(express.urlencoded({ extended: false }));
 
-const URL = "mongodb://localhost:27017";
+const URL =process.env.mongodb_url;
 
 function authorize(req, res, next) {
     if (req.headers.authorization) {
